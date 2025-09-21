@@ -1,4 +1,5 @@
 import pygame
+
 from sys import exit
 import random
 
@@ -33,12 +34,12 @@ class Pipe(pygame.Rect):
         self.passed = False
 
 #game images
-background_image = pygame.image.load("flappybirdbg.png")
-bird_image = pygame.image.load("flappybird.png")
+background_image = pygame.image.load("resource/flappybirdbg.png")
+bird_image = pygame.image.load("resource/flappybird.png")
 bird_image = pygame.transform.scale(bird_image, (bird_width, bird_height))
-top_pipe_image = pygame.image.load("toppipe.png")
+top_pipe_image = pygame.image.load("resource/toppipe.png")
 top_pipe_image = pygame.transform.scale(top_pipe_image, (pipe_width, pipe_height))
-bottom_pipe_image = pygame.image.load("bottompipe.png")
+bottom_pipe_image = pygame.image.load("resource/bottompipe.png")
 bottom_pipe_image = pygame.transform.scale(bottom_pipe_image, (pipe_width, pipe_height))
 
 #game logic
@@ -141,6 +142,6 @@ while running: #game loop
         pygame.display.update()
         clock.tick(60) #60 fps
 
-pygame.KEYDOWN()
+
 pygame.quit()
 exit()
